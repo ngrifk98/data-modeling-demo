@@ -1,0 +1,192 @@
+﻿Features
+* users can sign into the app with their email and password
+* users can follow each other
+* users can create posts with photos and/or text
+* users can comment on posts
+* users can join groups
+* users can create posts within groups
+
+
+Brainstorming/Data:
+What are the pieces of information we’ll need on the site?
+
+
+Sign in process
+* Email
+* Password
+* Username
+* First name
+* Last name
+* Birthday
+* Timestamp
+* Location
+* Zip code
+* Security question
+* Phone number
+* PIN
+* Interests
+* Profile picture
+* Role
+* Security image
+* User ID
+
+
+User can follow each other
+* User Id 1
+* User Id 2 
+* Are they blocked?
+
+
+
+
+Posts with photos/text
+* Image URL
+* Location
+* Body text
+* Time stamp
+* Tags 
+* Likes
+* Visibility setting
+* Post ID
+* User ID
+* Count of comments
+* Count of views
+
+
+Responses/Comments
+* User ID
+* Post ID
+* Comment ID
+* Rating
+* Comment/Body Text
+
+
+User can join groups
+* Group ID
+* Group Name
+* Public/Private Group
+* User ID(s)
+* Admin
+* Invite
+* Permissions
+* Description of Group
+
+
+Post within Group
+* Group ID
+* Image URL
+* Location
+* Body text
+* Time stamp
+* Tags 
+* Likes
+* Visibility setting
+* Post ID
+* User ID
+* Count of comments
+* Count of views
+
+
+
+
+TABLE IDEAS
+
+
+Users Table
+* Email
+* Password
+* Username
+* First name
+* Last name
+* User ID
+
+
+User Details Table
+* Birthday
+* Timestamp
+* Location
+* Zip code
+* Security question
+* Phone number
+* PIN
+* Interests
+* Profile picture
+* Role
+* Security image
+* User ID => Users Table (one to one)
+
+
+Friend List Table
+* FriendList ID
+* User ID 1  => Users Table (many to many)
+* User ID 2 => Users Table (many to many)
+* isBlocked? 
+
+
+
+
+
+
+Posts Table
+* Post ID
+* User ID => Users Table (one to many)
+* Image URL
+* Location
+* Body text
+* Time stamp
+* Likes
+* Visibility setting
+* Count of comments
+* Count of views
+
+
+Hashtag Table
+* Tag ID
+* Tag Name
+
+
+PostHashtag Table
+* PostHashtag ID
+* Post ID => Post Table (many to many)
+* Hashtag ID => Hashtag Table (many to many)
+
+
+Comments
+* User ID =>  User Table (One to many)
+* Post ID => Post Table (One to many)
+* Comment ID
+* Rating
+* Comment/Body Text
+
+
+Group Table
+* Group ID
+* Group Name
+* Public/Private Group
+* Description
+* User ID (creator)
+
+
+Group Member Table
+* Group Member ID
+* Group ID
+* User ID
+* User ID
+* Admin
+* Invite
+* Permissions
+
+
+Group Post Table
+* Group ID
+* Image URL
+* Location
+* Body text
+* Time stamp
+* Tags 
+* Likes
+* Visibility setting
+* Post ID
+* User ID
+* Count of comments
+* Count of views
